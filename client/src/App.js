@@ -31,7 +31,7 @@ class App extends Component {
     }
 
     axios({
-      url:'/api/save',
+      url:'/save',
       method: 'POST',
       data: payload
     })
@@ -44,7 +44,7 @@ class App extends Component {
   }
 
   getBlogPosts = () => {
-    axios.get('/api/get')
+    axios.get('/get')
     .then((response) => {
       const data = response.data
       this.setState({ posts: data})

@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(morgan('tiny'))
 
-app.use('/api', routes)
+app.use('/', routes)
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))
