@@ -2,7 +2,7 @@ const express = require('express')
 const morgan  = require('morgan')
 const mongoose = require('mongoose')
 const path = require('path')
-const routes = require('../EsterlingAccime/routes/api')
+const routes = require('./routes/api')
 
 const app = express()
 const PORT = process.env.PORT || 8080
