@@ -1,0 +1,57 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(20, 20, 46);
+}
+h2{
+  padding: 10px;
+  color: rgb(174, 169, 201);
+}
+
+form {
+  margin: 10px;
+  width: 30%;
+}
+input{
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+}
+textarea{
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border:1px solid gray;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+}
+button {
+  color: #000;
+  background-color: rgb(0, 235, 227);
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.posts {
+  width: 80%;
+  padding: 0 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(109, 109, 109);
+}
+
+h3{
+  color: rgb(223, 223, 223);
+}
+
+p {
+  color: rgb(175, 175, 175);
+}
