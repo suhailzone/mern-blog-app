@@ -6,7 +6,7 @@ const routes = require('./routes/api')
 
 const app = express()
 const PORT = process.env.PORT || 8080
-
+console.log('Server Executing')
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_practise', {
     useNewUrlParser: true,
     useUnifiedTopology: true
