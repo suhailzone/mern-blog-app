@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/get', (req, res) => {
     BlogPost.find({ })
     .then(data => res.json(data))
-    .catch(err => console.log(err))
+    .catch(err => console.log('api:',err))
 })
 
 router.post('/save', (req, res) => {
