@@ -24,35 +24,39 @@ class App extends Component {
 
   formSubmission = event => {
     event.preventDefault()
+    if(this.state.title === '' || this.state.body === ''){
+      console.log('No data entered')
+    }else{
+      const payload = {
+        title: this.state.title,
+        body: this.state.body
+      }
 
-    const payload = {
-      title: this.state.title,
-      body: this.state.body
+      axios({
+        url:'/save',
+        method: 'POST',
+        data: payload
+      })
+      .then(() => {
+        console.log('Data sent')
+        this.resetInputs()
+        this.getBlogPosts()
+      })
+      .catch(() => console.log('Internal Error'))
     }
-
-    axios({
-      url:'/save',
-      method: 'POST',
-      data: payload
-    })
-    .then(() => {
-      console.log('Data sent')
-      this.resetInputs()
-      this.getBlogPosts()
-    })
-    .catch(() => console.log('Internal Error'))
   }
 
-  getBlogPosts = () => {
-    axios.get('/get')
-    .then((response) => {
-      const data = response.data
-      this.setState({ posts: data})
-      console.log('Data received')
-    })
-    .catch((err) => {
-      console.log('Error:', err)
-    })
+    getBlogPosts = () => {
+      axios.get('/get')
+      .then((response) => {
+        const data = response.data
+        this.setState({ posts: data})
+        console.log('Data received')
+      })
+      .catch((err) => {
+        console.log('Error:', err)
+      })
+
   }
 
   resetInputs = () => {
